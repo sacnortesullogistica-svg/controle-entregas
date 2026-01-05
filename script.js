@@ -28,6 +28,7 @@ function logout() {
 const listaMotoristas = [
   "Antonio Helder",
   "Antonio Vieira",
+  "Galpão",
   "Hilberto",
   "Fiderlan",
   "Gedimar",
@@ -137,3 +138,4 @@ filtroStatus.addEventListener('change', renderizar);
 
 carregarMotoristas();
 renderizar();
+
