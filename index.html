@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>WSM Transportes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>WSM TRANSPORTES</h1>
+    <span id="usuarioLogado"></span>
+  </div>
+
+  <div class="acoes-topo">
+    <button onclick="alternarTema()">🌙 / ☀️</button>
+    <button onclick="logout()">Sair</button>
+  </div>
+</header>
+
+<form id="entregaForm">
+  <input type="hidden" id="editIndex">
+
+  <select id="motorista" required></select>
+  <input type="date" id="data" required>
+  <input type="text" id="remetente" placeholder="Remetente" required>
+  <input type="text" id="destinatario" placeholder="Destinatário" required>
+  <input type="number" id="volumes" placeholder="Volumes" required>
+  <input type="text" id="nota" placeholder="Nota Fiscal" required>
+
+  <select id="status" required>
+    <option value="aguardando">Aguardando</option>
+    <option value="finalizado">Finalizado</option>
+    <option value="atrasado">Atrasado / Cancelado</option>
+  </select>
+
+  <button type="submit">Salvar</button>
+</form>
+
+<select id="filtroStatus">
+  <option value="todos">Todos</option>
+  <option value="aguardando">Aguardando</option>
+  <option value="finalizado">Finalizado</option>
+  <option value="atrasado">Atrasado</option>
+</select>
+
+<table>
+  <thead>
+    <tr>
+      <th>Motorista</th>
+      <th>Data</th>
+      <th>Remetente</th>
+      <th>Destinatário</th>
+      <th>Volumes</th>
+      <th>Nota</th>
+      <th>Status</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody id="tabela"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
